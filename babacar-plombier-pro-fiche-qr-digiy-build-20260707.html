@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<title>Babacar Plombier Pro — Plombier professionnel | DIGIYLYFE</title>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Babacar Plombier Pro, plombier professionnel à Saly et Petite Côte. Dépannage fuite, installation, plomberie sanitaire, contact direct." name="description"/>
+<meta content="#06130f" name="theme-color"/>
+<meta content="Babacar Plombier Pro — Plombier professionnel" property="og:title"/>
+<meta content="Dépannage fuite, installation, plomberie sanitaire · Saly · Contact direct" property="og:description"/>
+<meta content="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root{
+      --bg:#06130f;
+      --card:#0b241b;
+      --line:rgba(255,255,255,.12);
+      --ink:#f8fafc;
+      --muted:rgba(248,250,252,.76);
+      --gold:#d4af37;
+      --gold2:#f3d46b;
+      --green:#22c55e;
+      --orange:#f97316;
+      --radius:24px;
+      --shadow:0 24px 60px rgba(0,0,0,.32);
+      --font:"Outfit",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      font-family:var(--font);
+      background:
+        radial-gradient(900px 520px at 8% -10%, rgba(212,175,55,.14), transparent 58%),
+        radial-gradient(850px 520px at 100% 0%, rgba(249,115,22,.12), transparent 55%),
+        radial-gradient(900px 520px at 100% 100%, rgba(34,197,94,.10), transparent 58%),
+        linear-gradient(180deg, #071510 0%, #06130f 48%, #04100c 100%);
+      padding-bottom:calc(96px + env(safe-area-inset-bottom,0px));
+    }
+
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+
+    .wrap{
+      width:min(100%,1120px);
+      margin:0 auto;
+      padding:16px 14px 42px;
+      display:grid;
+      gap:16px;
+    }
+
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      min-width:0;
+    }
+
+    .logo{
+      width:58px;
+      height:58px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid rgba(212,175,55,.24);
+      background:#fff;
+      flex:0 0 auto;
+      box-shadow:0 10px 28px rgba(0,0,0,.20);
+    }
+
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .kicker{
+      color:var(--gold2);
+      font-size:13px;
+      font-weight:1000;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+
+    .title{
+      font-size:clamp(24px,3vw,36px);
+      font-weight:1000;
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .sub{
+      margin-top:5px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.45;
+      font-weight:800;
+    }
+
+    .topActions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      min-height:56px;
+      border:none;
+      border-radius:17px;
+      padding:14px 17px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      font-size:17px;
+      font-weight:1000;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:filter .18s ease, transform .08s ease;
+      text-align:center;
+    }
+
+    .btn:active{transform:translateY(1px) scale(.99)}
+    .btn.primary{
+      background:linear-gradient(135deg,var(--orange),var(--gold2));
+      color:#13200d;
+      box-shadow:0 14px 30px rgba(249,115,22,.22);
+    }
+
+    .btn.secondary{
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.10);
+      color:var(--ink);
+    }
+
+    .btn.green{
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.30);
+      color:#bbf7d0;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.04fr .96fr;
+      gap:16px;
+    }
+
+    .panel{
+      background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .poster{
+      background:#06130f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:560px;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .poster img{
+      width:100%;
+      max-height:760px;
+      object-fit:contain;
+      display:block;
+      padding:10px;
+    }
+
+    .body{padding:22px}
+    h1{
+      margin:0 0 12px;
+      font-size:clamp(36px,7vw,64px);
+      line-height:1;
+      letter-spacing:-.055em;
+    }
+
+    .lead{
+      margin:0;
+      color:#fff3b2;
+      font-size:clamp(20px,3vw,28px);
+      font-weight:1000;
+      line-height:1.25;
+    }
+
+    .text{
+      margin-top:18px;
+      color:#eef6f2;
+      font-size:19px;
+      font-weight:800;
+      line-height:1.7;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:16px;
+    }
+
+    .chip{
+      min-height:38px;
+      padding:0 13px;
+      border-radius:999px;
+      display:inline-flex;
+      align-items:center;
+      background:rgba(212,175,55,.09);
+      border:1px solid rgba(212,175,55,.20);
+      color:var(--gold2);
+      font-size:15px;
+      font-weight:1000;
+    }
+
+    .chip.ok{
+      border-color:rgba(34,197,94,.26);
+      background:rgba(34,197,94,.10);
+      color:#bbf7d0;
+    }
+
+    .side{
+      padding:18px;
+      display:grid;
+      gap:12px;
+      align-content:start;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015)),
+        linear-gradient(180deg,#0a1c16,#0d241c);
+    }
+
+    .qrCard{
+      border:1px solid rgba(212,175,55,.28);
+      border-radius:26px;
+      background:radial-gradient(420px 180px at 50% 0%, rgba(212,175,55,.15), transparent 62%),rgba(0,0,0,.15);
+      padding:18px;
+      display:grid;
+      gap:12px;
+      text-align:center;
+    }
+
+    .qrKicker{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
+      margin:auto;
+      padding:9px 13px;
+      border-radius:999px;
+      border:1px solid rgba(212,175,55,.28);
+      background:rgba(212,175,55,.11);
+      color:#fde68a;
+      font-size:16px;
+      font-weight:1000;
+    }
+
+    .qrImg{
+      width:min(100%,250px);
+      height:auto;
+      margin:auto;
+      display:block;
+      border-radius:22px;
+      background:#fff;
+      padding:12px;
+      border:1px solid rgba(212,175,55,.42);
+      box-shadow:0 14px 34px rgba(0,0,0,.34);
+    }
+
+    .qrTitle{
+      font-size:28px;
+      line-height:1.08;
+      font-weight:1000;
+      color:var(--gold2);
+    }
+
+    .qrText{
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.45;
+      font-weight:900;
+    }
+
+    .qrLink{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.18);
+      padding:10px;
+      word-break:break-word;
+      font-size:13px;
+      line-height:1.35;
+      color:rgba(248,250,252,.72);
+      font-weight:900;
+    }
+
+    .actions{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:10px;
+    }
+
+    .miniStat{
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:19px;
+      padding:15px;
+      background:rgba(255,255,255,.035);
+    }
+
+    .miniLabel{
+      color:rgba(248,250,252,.58);
+      font-size:13px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:8px;
+    }
+
+    .miniValue{
+      font-size:23px;
+      font-weight:1000;
+      line-height:1.15;
+      letter-spacing:-.035em;
+      word-break:break-word;
+    }
+
+    .miniHint{
+      margin-top:7px;
+      color:var(--muted);
+      font-size:16px;
+      font-weight:800;
+      line-height:1.45;
+    }
+
+    .foot{
+      margin-top:2px;
+      color:var(--muted);
+      font-size:15px;
+      font-weight:850;
+      line-height:1.6;
+      text-align:center;
+    }
+
+    .bottomNav{
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:99990;
+      padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));
+      background:rgba(6,19,15,.95);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .bottomInner{
+      width:min(100%,760px);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:6px;
+    }
+
+    .bottomInner a,
+    .bottomInner button{
+      min-height:62px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      align-content:center;
+      gap:3px;
+      color:rgba(248,250,252,.75);
+      font-size:12px;
+      font-weight:1000;
+      text-align:center;
+      border:1px solid transparent;
+      text-decoration:none;
+      background:transparent;
+      cursor:pointer;
+      padding:0 4px;
+    }
+
+    .bottomInner .active{
+      color:#13200d;
+      background:linear-gradient(135deg,var(--orange),var(--gold2));
+    }
+
+    .ico{font-size:20px;line-height:1}
+
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:calc(96px + env(safe-area-inset-bottom,0px));
+      transform:translateX(-50%) translateY(12px);
+      z-index:99999;
+      opacity:0;
+      pointer-events:none;
+      transition:.22s ease;
+      max-width:calc(100vw - 24px);
+      padding:12px 18px;
+      border-radius:999px;
+      border:1px solid rgba(243,212,107,.28);
+      background:rgba(16,38,30,.97);
+      color:var(--gold2);
+      font-size:15px;
+      font-weight:1000;
+      box-shadow:var(--shadow);
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+
+    /* ===== EMPREINTE OFFICIELLE DIGIY ===== */
+    .digiyOfficial{
+      margin-top:16px;
+      display:grid;
+      gap:10px;
+      padding:16px;
+      border-radius:22px;
+      border:1px solid rgba(212,175,55,.34);
+      background:
+        radial-gradient(460px 180px at 0% 0%,rgba(212,175,55,.15),transparent 62%),
+        rgba(0,0,0,.18);
+    }
+
+    .digiyOfficialTop{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+    }
+
+    .digiySeal{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:38px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg,rgba(249,115,22,.20),rgba(212,175,55,.18));
+      border:1px solid rgba(243,212,107,.42);
+      color:#fff7c2;
+      font-size:14px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .digiySeal.green{
+      color:#bbf7d0;
+      border-color:rgba(34,197,94,.34);
+      background:rgba(34,197,94,.12);
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .digiyOfficialText{
+      color:#f8fafc;
+      font-size:17px;
+      line-height:1.55;
+      font-weight:900;
+    }
+
+    .digiyOfficialText strong{
+      color:var(--gold2);
+      font-weight:1000;
+    }
+
+    .digiyQrSeal{
+      display:grid;
+      gap:7px;
+      padding:12px;
+      border-radius:18px;
+      border:1px solid rgba(243,212,107,.30);
+      background:rgba(0,0,0,.22);
+      color:#f8fafc;
+      font-size:15px;
+      line-height:1.45;
+      font-weight:900;
+    }
+
+    .digiyQrSeal strong{
+      color:var(--gold2);
+      font-weight:1000;
+    }
+
+    @media(max-width:980px){.hero{grid-template-columns:1fr}}
+    @media(max-width:640px){
+      .wrap{padding:12px 10px 36px}
+      .topActions{display:none}
+      .poster{min-height:430px}
+      .body,.side{padding:18px}
+      .btn{width:100%;min-height:62px;font-size:18px}
+      .qrImg{width:min(82vw,270px)}
+    }
+  
+
+    .langSwitch{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:5px;
+      border-radius:999px;
+      border:1px solid rgba(243,212,107,.30);
+      background:rgba(255,255,255,.055);
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .langSwitch button{
+      border:0;
+      min-height:42px;
+      padding:0 14px;
+      border-radius:999px;
+      background:transparent;
+      color:var(--ink);
+      cursor:pointer;
+      font-weight:1000;
+      font-size:14px;
+      font-family:var(--font);
+    }
+    .langSwitch button.active{
+      background:linear-gradient(135deg,var(--orange),var(--gold2));
+      color:#13200d;
+    }
+    @media(max-width:640px){
+      .langSwitch{
+        width:100%;
+        justify-content:center;
+        order:5;
+      }
+      .langSwitch button{
+        flex:1;
+      }
+    }
+</style>
+<meta content="babacar-plombier-pro-fr-en-qr-20260707" name="digiy-build"/></head>
+<body>
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="logo">
+<img alt="Logo DIGIYLYFE" src="https://digiylyfe.net/wp-content/uploads/2026/03/digiylyfe_logo_qr.jpeg"/>
+</div>
+<div>
+<div class="kicker" data-i18n="top_kicker">Je propose mes services</div>
+<div class="title" data-i18n="top_title">Babacar Plombier Pro</div>
+<div class="sub" data-i18n="top_sub">Plombier professionnel · Saly · Petite Côte</div>
+</div>
+</div>
+<div class="topActions">
+<a class="btn secondary" data-i18n="top_gallery" href="https://build.digiylyfe.com/listing.html">Retour galerie</a>
+<a class="btn secondary" data-i18n="top_site" href="https://digiylyfe.com/">Site</a>
+<a class="btn secondary" data-i18n="top_hub" href="https://digiy-hub.digiylyfe.com/">HUB</a>
+</div>
+<div aria-label="Changer la langue" class="langSwitch"><button class="active" id="langFr" type="button">FR</button><button id="langEn" type="button">EN</button></div></header>
+<section class="hero">
+<main class="panel">
+<div class="poster">
+<img alt="Babacar Plombier Pro — plombier professionnel" loading="eager" src="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png"/>
+</div>
+<div class="body">
+<h1 data-i18n="h1_name">Babacar Plombier Pro</h1>
+<p class="lead" data-i18n="lead">Plombier professionnel · fuite · dépannage · installation sanitaire</p>
+<div class="chips">
+<span class="chip ok" data-i18n="chip_contact">Contact direct</span>
+<span class="chip ok" data-i18n="chip_qr">QR officiel DIGIY</span>
+<span class="chip ok" data-i18n="chip_commission">0% commission</span>
+<span class="chip" data-i18n="chip_plumbing">Plomberie</span>
+<span class="chip" data-i18n="chip_repair">Dépannage</span>
+<span class="chip" data-i18n="chip_install">Installation</span>
+<span class="chip" data-i18n="chip_bath">Salle de bain</span>
+<span class="chip" data-i18n="chip_saly">Saly</span>
+</div>
+<div class="text" data-i18n="main_text">
+            Dépannage fuites, robinets, WC, installation douche, lavabo, chauffe-eau, désengorgement
+            et petits chantiers sanitaires. Le client voit le métier, la zone, le contact et peut ouvrir
+            la demande en gardant la fiche sous la main.
+          </div>
+<div aria-label="Empreinte officielle DIGIYLYFE" class="digiyOfficial">
+<div class="digiyOfficialTop">
+<span class="digiySeal" data-i18n="official_qr_badge">▣ QR officiel DIGIYLYFE</span>
+<span class="digiySeal green" data-i18n="official_contact_badge">Contact direct · 0% commission</span>
+</div>
+<div class="digiyOfficialText" data-i18n-html="official_text">
+              Cette fiche est une route directe entre le client et le professionnel :
+              métier clair, zone claire, WhatsApp, demande de besoin et partage terrain.
+              <strong>La valeur du business reste dans la main du pro local.</strong>
+</div>
+</div>
+</div>
+</main>
+<aside class="panel side">
+<article aria-label="QR de la fiche Babacar Plombier Pro" class="qrCard" id="qr">
+<div class="qrKicker" data-i18n="qr_kicker">📲 QR officiel DIGIYLYFE</div>
+<a href="#" id="qrAnchor" rel="noopener" target="_blank">
+<img alt="QR fiche Babacar Plombier Pro DIGIY BUILD" class="qrImg" id="qrImg"/>
+</a>
+<div class="qrTitle" data-i18n="qr_title">Scanne la fiche officielle</div>
+<div class="qrText" data-i18n="qr_text">Ce QR ouvre directement la fiche officielle Babacar Plombier Pro : métier, zone, contact direct, demande et partage terrain.</div>
+<div class="digiyQrSeal">
+<div data-i18n-html="qr_seal_1"><strong>Fiche pro terrain · DIGIY BUILD</strong></div>
+<div data-i18n="qr_seal_2">Contact direct · demande directe · 0% commission.</div>
+<div data-i18n="qr_seal_3">La valeur du business reste dans la main du pro local.</div>
+</div>
+<div class="qrLink" id="qrLinkText">Préparation du lien…</div>
+</article>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_trade_label">Métier</div>
+<div class="miniValue" data-i18n="mini_trade_value">Plombier professionnel</div>
+<div class="miniHint" data-i18n="mini_trade_hint">Dépannage fuite, installation sanitaire, robinetterie, WC, lavabo, douche et petits travaux de plomberie.</div>
+</div>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_zone_label">Zone</div>
+<div class="miniValue" data-i18n="mini_zone_value">Saly · Petite Côte</div>
+<div class="miniHint" data-i18n="mini_zone_hint">Intervention selon disponibilité et besoin du client.</div>
+</div>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_contact_label">Contact direct</div>
+<div class="miniValue">+221 77 612 51 24</div>
+<div class="miniHint" data-i18n="mini_contact_hint">Le client écrit directement au professionnel.</div>
+</div>
+<div class="actions">
+<a class="btn primary" data-i18n="btn_whatsapp" href="#" id="waBtn">💬 WhatsApp direct</a>
+<a class="btn secondary" data-i18n="btn_need" href="https://build.digiylyfe.com/request.html?slug=babacar-plombier-pro&amp;nom=Babacar%20Plombier%20Pro&amp;metier=Plomberie&amp;ville=Saly">📄 Décrire mon besoin</a>
+<button class="btn secondary" data-i18n="btn_copy" id="copyBtn" type="button">📋 Copier la fiche</button>
+<button class="btn green" data-i18n="btn_share" id="shareBtn" type="button">📤 Partager</button>
+</div>
+</aside>
+</section>
+<div class="foot" data-i18n="footer_note">
+      DIGIY BUILD • fiche publique officielle • QR DIGIY visible • métier clair • secteur • contact direct • demande directe • 0% commission • sans PIN
+    </div>
+</div>
+<nav aria-label="Navigation Babacar Plombier Pro" class="bottomNav">
+<div class="bottomInner">
+<a href="https://build.digiylyfe.com/listing.html"><span class="ico">←</span><span data-i18n="bottom_gallery">Galerie</span></a>
+<a class="active" href="#qr"><span class="ico">📲</span><span data-i18n="bottom_qr">QR</span></a>
+<a href="#" id="bottomWa"><span class="ico">💬</span><span data-i18n="bottom_whatsapp">WhatsApp</span></a>
+<button id="bottomShare" type="button"><span class="ico">📤</span><span data-i18n="bottom_share">Partager</span></button>
+</div>
+</nav>
+<div class="toast" data-i18n="toast_copy" id="toast">Lien copié</div>
+<script>
+    (function(){
+      "use strict";
+
+      const PHONE = "221776125124";
+      const NAME = "Babacar Plombier Pro";
+      const TRADE = "Plombier professionnel";
+
+      function currentUrl(){
+        const u = new URL(location.href);
+        ["phone","tel","owner_phone","contact_phone","whatsapp","return","from","pin","token"].forEach(k => u.searchParams.delete(k));
+        return u.toString();
+      }
+
+      const profileUrl = currentUrl();
+
+      function whatsappUrl(){
+        const msg = encodeURIComponent(`Bonjour ${NAME}, je viens de votre fiche officielle DIGIYLYFE pour votre service ${TRADE}.`);
+        return `https://wa.me/${PHONE}?text=${msg}`;
+      }
+
+      function qrFallbackUrl(value){
+        const u = new URL("https://api.qrserver.com/v1/create-qr-code/");
+        u.searchParams.set("size","560x560");
+        u.searchParams.set("margin","16");
+        u.searchParams.set("data", value);
+        return u.toString();
+      }
+
+      function setQr(){
+        const img = document.getElementById("qrImg");
+        const anchor = document.getElementById("qrAnchor");
+        const linkText = document.getElementById("qrLinkText");
+        if(anchor) anchor.href = profileUrl;
+        if(linkText) linkText.textContent = profileUrl;
+
+        function fallback(){
+          img.src = qrFallbackUrl(profileUrl);
+        }
+
+        try{
+          if(window.QRCode && typeof window.QRCode.toDataURL === "function"){
+            window.QRCode.toDataURL(profileUrl, {
+              width:560,
+              margin:1,
+              errorCorrectionLevel:"M",
+              color:{dark:"#111827", light:"#FFFFFF"}
+            }, (err, dataUrl) => {
+              if(err || !dataUrl) fallback();
+              else img.src = dataUrl;
+            });
+          }else{
+            fallback();
+          }
+        }catch(_){
+          fallback();
+        }
+      }
+
+      async function copy(value){
+        try{
+          await navigator.clipboard.writeText(value);
+          toast("Lien copié");
+        }catch(_){
+          window.prompt("Copie le lien :", value);
+        }
+      }
+
+      async function share(){
+        try{
+          if(navigator.share){
+            await navigator.share({
+              title:`${NAME} — DIGIY BUILD`,
+              text:`${TRADE} · Saly · contact direct · 0% commission · QR officiel DIGIYLYFE`,
+              url:profileUrl
+            });
+            return;
+          }
+        }catch(_){}
+        copy(profileUrl);
+      }
+
+      function toast(text){
+        const t = document.getElementById("toast");
+        t.textContent = text || "Lien copié";
+        t.classList.add("show");
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => t.classList.remove("show"), 1900);
+      }
+
+      document.getElementById("waBtn").href = whatsappUrl();
+      document.getElementById("bottomWa").href = whatsappUrl();
+      document.getElementById("copyBtn").onclick = () => copy(profileUrl);
+      document.getElementById("shareBtn").onclick = share;
+      document.getElementById("bottomShare").onclick = share;
+
+      setQr();
+    })();
+  </script>
+<script>
+(function(){
+  "use strict";
+
+  const PHONE = "221776125124";
+  const PROFILE_URL = "https://babacar-plombier-pro.digiylyfe.com/";
+
+  const TXT = {
+    fr:{
+      htmlLang:"fr",
+      title:"Babacar Plombier Pro — Plombier professionnel | DIGIYLYFE",
+      desc:"Babacar Plombier Pro, plombier professionnel à Saly et Petite Côte. Dépannage fuite, installation, plomberie sanitaire, contact direct.",
+      ogTitle:"Babacar Plombier Pro — Plombier professionnel",
+      ogDesc:"Dépannage fuite, installation, plomberie sanitaire · Saly · Contact direct",
+      waMsg:"Bonjour Babacar Plombier Pro, je viens de votre fiche officielle DIGIYLYFE pour un besoin en plomberie.",
+      shareTitle:"Babacar Plombier Pro — DIGIY BUILD",
+      shareText:"Babacar Plombier Pro · plomberie · Saly · contact direct · 0% commission · QR officiel DIGIYLYFE",
+      top_kicker:"Je propose mes services",
+      top_title:"Babacar Plombier Pro",
+      top_sub:"Plombier professionnel · Saly · Petite Côte",
+      top_gallery:"Retour galerie",
+      top_site:"Site",
+      top_hub:"HUB",
+      h1_name:"Babacar Plombier Pro",
+      lead:"Plombier professionnel · fuite · dépannage · installation sanitaire",
+      chip_contact:"Contact direct",
+      chip_qr:"QR officiel DIGIY",
+      chip_commission:"0% commission",
+      chip_plumbing:"Plomberie",
+      chip_repair:"Dépannage",
+      chip_install:"Installation",
+      chip_bath:"Salle de bain",
+      chip_saly:"Saly",
+      main_text:"Dépannage fuite, robinet, WC, lavabo, douche, chasse d’eau, tuyauterie, installation sanitaire, petits travaux de plomberie et intervention rapide selon disponibilité. Le client voit le métier, la zone, le contact et peut écrire directement à Babacar par WhatsApp.",
+      official_qr_badge:"▣ QR officiel DIGIYLYFE",
+      official_contact_badge:"Contact direct · 0% commission",
+      official_text:'Cette fiche est une route directe entre le client et le professionnel : métier clair, zone claire, WhatsApp, demande de besoin et partage terrain. <strong>La valeur du business reste dans la main du pro local.</strong>',
+      qr_kicker:"📲 QR officiel DIGIYLYFE",
+      qr_title:"Scanne la fiche officielle",
+      qr_text:"Ce QR ouvre directement la fiche officielle Babacar Plombier Pro : métier, zone, contact direct, demande et partage terrain.",
+      qr_seal_1:"<strong>Fiche pro terrain · DIGIY BUILD</strong>",
+      qr_seal_2:"Contact direct · demande directe · 0% commission.",
+      qr_seal_3:"La valeur du business reste dans la main du pro local.",
+      mini_trade_label:"Métier",
+      mini_trade_value:"Plombier professionnel",
+      mini_trade_hint:"Dépannage fuite, installation sanitaire, robinetterie, WC, lavabo, douche et petits travaux de plomberie.",
+      mini_zone_label:"Zone",
+      mini_zone_value:"Saly · Petite Côte",
+      mini_zone_hint:"Intervention selon disponibilité et besoin du client.",
+      mini_contact_label:"Contact direct",
+      mini_contact_value:"WhatsApp disponible",
+      mini_contact_hint:"Le client écrit directement au professionnel.",
+      btn_whatsapp:"💬 WhatsApp direct",
+      btn_need:"📄 Décrire mon besoin",
+      btn_copy:"📋 Copier la fiche",
+      btn_share:"📤 Partager",
+      footer_note:"DIGIY BUILD • fiche publique officielle • QR DIGIY visible • métier clair • secteur • contact direct • demande directe • 0% commission • sans PIN",
+      bottom_gallery:"Galerie",
+      bottom_qr:"QR",
+      bottom_whatsapp:"WhatsApp",
+      bottom_share:"Partager",
+      toast_copy:"Lien copié",
+      toast_shared:"Lien copié",
+      prompt_copy:"Copie le lien :"
+    },
+    en:{
+      htmlLang:"en",
+      title:"Babacar Plombier Pro — Multi-service Plumber | DIGIYLYFE",
+      desc:"Babacar Plombier Pro, multi-service plumber in Saly and on the Petite Côte. Repairs, installation, bathroom work and direct contact.",
+      ogTitle:"Babacar Plombier Pro — Multi-service Plumber",
+      ogDesc:"Leak repairs, installation, sanitary plumbing · Saly · Direct contact",
+      waMsg:"Hello Babacar Plombier Pro, I’m coming from your official DIGIYLYFE card for your multi-service plumbing work.",
+      shareTitle:"Babacar Plombier Pro — DIGIY BUILD",
+      shareText:"Multi-service plumber · Saly · direct contact · 0% commission · official DIGIYLYFE QR",
+      top_kicker:"I offer my services",
+      top_title:"Babacar Plombier Pro",
+      top_sub:"Multi-service plumber · Saly · Petite Côte",
+      top_gallery:"Back to gallery",
+      top_site:"Site",
+      top_hub:"HUB",
+      h1_name:"Babacar Plombier Pro",
+      lead:"Multi-service plumber · repairs · installation · bathroom",
+      chip_contact:"Direct contact",
+      chip_qr:"Official DIGIY QR",
+      chip_commission:"0% commission",
+      chip_plumbing:"Plumbing",
+      chip_repair:"Repairs",
+      chip_install:"Installation",
+      chip_bath:"Bathroom",
+      chip_saly:"Saly",
+      main_text:"Leak repairs, taps, toilets, sinks, showers, flush systems, piping, sanitary installation, small plumbing works and quick intervention depending on availability. The client sees the trade, area and contact, then writes directly to Babacar on WhatsApp.",
+      official_qr_badge:"▣ Official DIGIYLYFE QR",
+      official_contact_badge:"Direct contact · 0% commission",
+      official_text:'This card is a direct route between the client and the professional: clear trade, clear area, WhatsApp, need request and field sharing. <strong>The value of the business stays in the local pro’s hands.</strong>',
+      qr_kicker:"📲 Official DIGIYLYFE QR",
+      qr_title:"Scan the official card",
+      qr_text:"This QR opens the official Babacar Plumber Pro card directly: trade, area, direct contact, request and field sharing.",
+      qr_seal_1:"<strong>Field pro card · DIGIY BUILD</strong>",
+      qr_seal_2:"Direct contact · direct request · 0% commission.",
+      qr_seal_3:"The value of the business stays in the local pro’s hands.",
+      mini_trade_label:"Trade",
+      mini_trade_value:"Multi-service plumber",
+      mini_trade_hint:"Leak repairs, sanitary installation, taps, toilets, sinks, showers and small plumbing jobs.",
+      mini_zone_label:"Area",
+      mini_zone_value:"Saly · Petite Côte",
+      mini_zone_hint:"Intervention depends on availability and the client’s need.",
+      mini_contact_label:"Direct contact",
+      mini_contact_value:"WhatsApp available",
+      mini_contact_hint:"The client writes directly to the professional.",
+      btn_whatsapp:"💬 Direct WhatsApp",
+      btn_need:"📄 Describe my need",
+      btn_copy:"📋 Copy the card",
+      btn_share:"📤 Share",
+      footer_note:"DIGIY BUILD • official public card • visible DIGIY QR • clear trade • area • direct contact • direct request • 0% commission • no PIN",
+      bottom_gallery:"Gallery",
+      bottom_qr:"QR",
+      bottom_whatsapp:"WhatsApp",
+      bottom_share:"Share",
+      toast_copy:"Link copied",
+      toast_shared:"Link copied",
+      prompt_copy:"Copy the link:"
+    }
+  };
+
+  let currentLang = "fr";
+
+  function pack(){ return TXT[currentLang] || TXT.fr; }
+
+  function cleanUrl(){
+    try{
+      const u = new URL(location.href);
+      ["phone","tel","owner_phone","contact_phone","whatsapp","return","from","pin","token","lang"].forEach(k => u.searchParams.delete(k));
+      return u.toString();
+    }catch(_){
+      return PROFILE_URL;
+    }
+  }
+
+  function whatsappUrl(){
+    return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(pack().waMsg);
+  }
+
+  function showToast(text){
+    const t = document.getElementById("toast");
+    if(!t) return;
+    t.textContent = text || pack().toast_copy;
+    t.classList.add("show");
+    clearTimeout(showToast._timer);
+    showToast._timer = setTimeout(() => t.classList.remove("show"), 1900);
+  }
+
+  async function copyLink(){
+    const value = cleanUrl();
+    try{
+      await navigator.clipboard.writeText(value);
+      showToast(pack().toast_copy);
+    }catch(_){
+      window.prompt(pack().prompt_copy, value);
+    }
+  }
+
+  async function shareLink(){
+    const url = cleanUrl();
+    try{
+      if(navigator.share){
+        await navigator.share({
+          title: pack().shareTitle,
+          text: pack().shareText,
+          url
+        });
+        return;
+      }
+    }catch(_){}
+    copyLink();
+  }
+
+  function setMeta(selector, attr, value){
+    const el = document.querySelector(selector);
+    if(el) el.setAttribute(attr, value);
+  }
+
+  function applyLang(lang){
+    currentLang = lang === "en" ? "en" : "fr";
+    const P = pack();
+
+    document.documentElement.setAttribute("lang", P.htmlLang);
+    document.title = P.title;
+    setMeta('meta[name="description"]', "content", P.desc);
+    setMeta('meta[property="og:title"]', "content", P.ogTitle);
+    setMeta('meta[property="og:description"]', "content", P.ogDesc);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if(P[key] != null) el.textContent = P[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+      const key = el.getAttribute("data-i18n-html");
+      if(P[key] != null) el.innerHTML = P[key];
+    });
+
+    document.getElementById("langFr")?.classList.toggle("active", currentLang === "fr");
+    document.getElementById("langEn")?.classList.toggle("active", currentLang === "en");
+
+    const wa = whatsappUrl();
+    const waBtn = document.getElementById("waBtn");
+    const bottomWa = document.getElementById("bottomWa");
+    if(waBtn) waBtn.href = wa;
+    if(bottomWa) bottomWa.href = wa;
+
+    const copyBtn = document.getElementById("copyBtn");
+    const shareBtn = document.getElementById("shareBtn");
+    const bottomShare = document.getElementById("bottomShare");
+    if(copyBtn) copyBtn.onclick = copyLink;
+    if(shareBtn) shareBtn.onclick = shareLink;
+    if(bottomShare) bottomShare.onclick = shareLink;
+
+    const toast = document.getElementById("toast");
+    if(toast) toast.textContent = P.toast_copy;
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("langFr")?.addEventListener("click", () => applyLang("fr"));
+    document.getElementById("langEn")?.addEventListener("click", () => applyLang("en"));
+    applyLang("fr");
+  });
+})();
+</script><script defer="" src="https://pro-action-digiy.digiylyfe.com/assets/js/digiy-retour-voix.js?v=retour-voix-20260606-v4"></script>
+</body>
+</html>
+
+
