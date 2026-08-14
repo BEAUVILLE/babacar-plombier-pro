@@ -1,0 +1,60 @@
+name: Doctrine adhérent Babacar
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/doctrine-adherent-fix.yml'
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Neutraliser le wording de certification
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          repl={
+            'Fiche artisan officielle':'ADHÉRENT DIGIYLYFE',
+            '✅ Fiche officielle':'👤 ADHÉRENT DIGIYLYFE',
+            'fiche officielle DIGIYLYFE':'fiche DIGIYLYFE',
+            'Official artisan profile':'DIGIYLYFE MEMBER',
+            '✅ Official profile':'👤 DIGIYLYFE MEMBER',
+            'official DIGIYLYFE profile':'DIGIYLYFE profile',
+            'Ficha oficial de artesano':'MIEMBRO DIGIYLYFE',
+            '✅ Ficha oficial':'👤 MIEMBRO DIGIYLYFE',
+            'ficha oficial DIGIYLYFE':'ficha DIGIYLYFE',
+            'Perfil oficial de artesão':'MEMBRO DIGIYLYFE',
+            'Perfil oficial de artesao':'MEMBRO DIGIYLYFE',
+            '✅ Perfil oficial':'👤 MEMBRO DIGIYLYFE',
+            'perfil oficial DIGIYLYFE':'perfil DIGIYLYFE',
+            'Offizielles Handwerkerprofil':'DIGIYLYFE-MITGLIED',
+            '✅ Offizielles Profil':'👤 DIGIYLYFE-MITGLIED',
+            'offiziellen DIGIYLYFE-Profil':'DIGIYLYFE-Profil',
+            'offiziellen DIGIYLYFE Profil':'DIGIYLYFE Profil',
+            'Scheda ufficiale artigiano':'MEMBRO DIGIYLYFE',
+            '✅ Scheda ufficiale':'👤 MEMBRO DIGIYLYFE',
+            'scheda ufficiale DIGIYLYFE':'scheda DIGIYLYFE',
+            'Officieel vakprofiel':'DIGIYLYFE-LID',
+            '✅ Officieel profiel':'👤 DIGIYLYFE-LID',
+            'officiële DIGIYLYFE-profiel':'DIGIYLYFE-profiel',
+            'officieel DIGIYLYFE-profiel':'DIGIYLYFE-profiel',
+            'ملف حرفي رسمي':'عضو DIGIYLYFE',
+            '✅ ملف رسمي':'👤 عضو DIGIYLYFE',
+            'ملف DIGIYLYFE الرسمي':'ملف DIGIYLYFE'
+          }
+          for a,b in repl.items(): s=s.replace(a,b)
+          p.write_text(s,encoding='utf-8')
+          PY
+          echo '=== Restes sensibles ==='
+          grep -inoE 'officiel|officielle|official|oficial|offiziell|ufficial|officieel|رسمي|vérifi|certifi|garanti|ambassadeur|sélectionné' index.html | head -80 || true
+      - name: Commit
+        run: |
+          git config user.name 'DIGIYLYFE Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Babacar : adhérent DIGIYLYFE sans certification' || exit 0
+          git push
