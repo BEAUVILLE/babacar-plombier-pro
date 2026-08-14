@@ -11,9 +11,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: OCR carte Babacar
+      - name: Localiser les zones de texte Babacar
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-fra
-          echo '=== carte-babacar-plombier-pro-9x16.png ==='
-          tesseract 'carte-babacar-plombier-pro-9x16.png' stdout -l fra+eng 2>/dev/null || true
+          python3 -m pip install --quiet pillow
+          python3 - <<'PY'
+          from PIL import Image
+          import subprocess,csv,io
+          f='carte-babacar-plombier-pro-9x16.png'
+          im=Image.open(f)
+          print('SIZE',im.size)
+          out=subprocess.check_output(['tesseract',f,'stdout','-l','fra+eng','tsv'],stderr=subprocess.DEVNULL,text=True)
+          rows=list(csv.DictReader(io.StringIO(out),delimiter='\t'))
+          for r in rows:
+              txt=(r.get('text') or '').strip()
+              if txt:
+                  print(txt,'left='+r['left'],'top='+r['top'],'width='+r['width'],'height='+r['height'])
+          PY
