@@ -1,0 +1,19 @@
+name: Audit carte DIGIYLYFE
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-card-wording.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: OCR carte Babacar
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-fra
+          echo '=== carte-babacar-plombier-pro-9x16.png ==='
+          tesseract 'carte-babacar-plombier-pro-9x16.png' stdout -l fra+eng 2>/dev/null || true
