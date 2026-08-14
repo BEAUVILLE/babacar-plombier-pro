@@ -3,8 +3,6 @@ name: Render carte Babacar
 on:
   push:
     branches: [main]
-    paths:
-      - 'carte-babacar-plombier-pro-9x16-adherent.svg'
 
 permissions:
   contents: write
