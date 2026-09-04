@@ -62,5 +62,6 @@ function share(){const t=P[lang],u=profileUrl();if(navigator.share)navigator.sha
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{const u=new URL(location.href);u.searchParams.set('lang',b.dataset.lang);history.replaceState({},'',u);apply(b.dataset.lang)});document.getElementById('copyBtn').onclick=copy;document.getElementById('dockCopy').onclick=copy;document.getElementById('shareTop').onclick=share;document.getElementById('dockShare').onclick=share;apply(lang)
 })();
 </script>
+<script src="https://digiylyfe.com/assets/digiy-card-favorite-v1.js?v=20260904-v2"></script>
 </body>
 </html>
