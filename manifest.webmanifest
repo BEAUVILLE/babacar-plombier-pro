@@ -1,0 +1,21 @@
+{
+  "name": "Babacar Plombier Pro",
+  "short_name": "Babacar Plombier",
+  "description": "Babacar Plombier Pro · présence professionnelle propulsée par DIGIYLYFE",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07150f",
+  "theme_color": "#126b43",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/carte-babacar-plombier-pro-9x16.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
