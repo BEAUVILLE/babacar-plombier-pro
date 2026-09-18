@@ -26,6 +26,13 @@
 .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;padding:10px 0 28px}.panel{background:rgba(255,255,255,.86);border:1px solid var(--line);border-radius:30px;padding:20px;box-shadow:0 14px 36px rgba(8,59,42,.10)}.panel h2{margin:0 0 12px;color:var(--g);font-size:1.65rem}.panel p{color:var(--muted);line-height:1.55}.services{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.service{padding:13px;border-radius:18px;background:rgba(18,107,67,.07);border:1px solid rgba(18,107,67,.10);font-weight:900}.doctrine{margin-top:14px;padding:15px;border-radius:21px;background:linear-gradient(135deg,rgba(18,107,67,.10),rgba(228,184,75,.15));line-height:1.5}.qr{text-align:center}.avatar{width:min(280px,100%);aspect-ratio:1;border-radius:28px;margin:auto;display:grid;place-items:center;background:linear-gradient(135deg,var(--d),var(--g));color:#fff3bf;font-size:5rem;font-weight:1000;box-shadow:0 18px 38px rgba(8,59,42,.24)}.qr img{width:min(250px,100%);background:#fff;border-radius:20px;padding:10px;border:1px solid var(--line);margin-top:14px}.qr small{display:block;margin-top:9px;color:var(--muted);word-break:break-word}.foot{padding:22px 0 105px;text-align:center;color:var(--muted);font-size:.82rem}.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(8,59,42,.97);padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px))}.dockin{width:min(680px,100%);margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.dock a,.dock button{border:0;min-height:58px;border-radius:16px;background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;text-align:center;font-size:.72rem;font-weight:1000;cursor:pointer}.dock strong{display:block;font-size:1.2rem}.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(12px);opacity:0;background:#10251c;color:#fff;padding:11px 15px;border-radius:999px;transition:.2s;z-index:40}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}html[dir="rtl"] body{text-align:right}html[dir="rtl"] .actions,html[dir="rtl"] .badges,html[dir="rtl"] .services{direction:rtl}
 @media(max-width:760px){.grid,.actions{grid-template-columns:1fr}.services{grid-template-columns:1fr}.heroCard{padding:21px}.brand small{display:none}.topin{justify-content:center;text-align:center;padding:8px 0}.lang{width:100%;border-radius:20px}.lang button{flex:1}}
 </style>
+
+    <link rel="manifest" href="/manifest.webmanifest?v=20260918-member-v1">
+    <link rel="apple-touch-icon" href="/carte-babacar-plombier-pro-9x16.png">
+    <meta name="application-name" content="Babacar Plombier Pro">
+    <meta name="apple-mobile-web-app-title" content="Babacar Plombier">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 <a data-digiy-return-home="1" href="https://digiylyfe.com/" aria-label="Retour à DIGIYLYFE" style="position:relative;z-index:9999;display:flex;align-items:center;justify-content:center;gap:10px;width:min(460px,calc(100% - 28px));min-height:58px;box-sizing:border-box;margin:14px auto;padding:12px 18px;border:2px solid #111;border-radius:14px;background:#fff;color:#111;text-decoration:none;font:950 17px/1.1 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 5px 16px rgba(0,0,0,.14);-webkit-tap-highlight-color:transparent"><span aria-hidden="true" style="font-size:26px;line-height:1">←</span><strong>RETOUR DIGIYLYFE</strong></a>
@@ -63,5 +70,10 @@ document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{const u=new 
 })();
 </script>
 <script src="https://digiylyfe.com/assets/digiy-card-favorite-v1.js?v=20260904-v2"></script>
+
+<script id="digiy-member-pwa-config">
+window.DIGIY_MEMBER_PWA={enabled:true,name:"Babacar Plombier Pro",finalUrl:"https://babacar-plombier-pro.digiylyfe.com/",manifestUrl:"/manifest.webmanifest?v=20260918-member-v1",iconUrl:"/carte-babacar-plombier-pro-9x16.png"};
+</script>
+<script src="https://digiylyfe.com/assets/digiy-member-pwa-v1.js?v=20260918-v1"></script>
 </body>
 </html>
