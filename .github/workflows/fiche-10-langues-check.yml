@@ -1,0 +1,16 @@
+name: Fiche langues WO et 中文 — contrôle
+on:
+  pull_request:
+    paths:
+      - index.html
+      - tests/test_member_fiche_ten_lang.py
+      - .github/workflows/fiche-10-langues-check.yml
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier toutes les traductions, le lien direct et QR
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v
