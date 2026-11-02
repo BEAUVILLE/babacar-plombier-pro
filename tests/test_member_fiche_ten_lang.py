@@ -19,7 +19,7 @@ class MemberFicheTenLanguages(unittest.TestCase):
         self.assertIn('lang="wo"', block)
 
     def test_both_dictionaries_have_full_independent_translation(self):
-        m = re.search(r'const P=\\{\\nwo:(\\{.*?\\}),\\nzh:(\\{.*?\\}),\\nfr:', HTML, re.S)
+        m = re.search(r'const P=\{\nwo:(\{.*?\}),\nzh:(\{.*?\}),\nfr:', HTML, re.S)
         self.assertIsNotNone(m)
         wo, zh = json.loads(m.group(1)), json.loads(m.group(2))
         required = {
@@ -50,7 +50,7 @@ class MemberFicheTenLanguages(unittest.TestCase):
 
     @unittest.skipUnless(shutil.which("node"), "Node.js unavailable")
     def test_inline_script_syntax(self):
-        blocks = re.findall(r'<script(?:\\s[^>]*)?>(.*?)</script>', HTML, re.S)
+        blocks = re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', HTML, re.S)
         program = next((b for b in blocks if "const P={" in b), "")
         self.assertTrue(program, "i18n script not found")
         run = subprocess.run(["node", "--check"], input=program,
