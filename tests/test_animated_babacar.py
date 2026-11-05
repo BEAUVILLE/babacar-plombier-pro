@@ -46,7 +46,7 @@ class AnimatedCard(unittest.TestCase):
         self.assertNotIn("analytics",block.lower())
         self.assertNotIn("data:image/gif;base64",HTML)
         self.assertEqual(HTML.count('▶ '),11)
-        self.assertNotIn('src="babacar-animation-stop.gif"', HTML)
+        self.assertIn('<img id="animatedGif" src="babacar-final.png"', HTML)
 
 if __name__ == "__main__":
     unittest.main()
