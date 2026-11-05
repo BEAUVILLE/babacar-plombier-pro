@@ -18,9 +18,17 @@ class AnimatedCard(unittest.TestCase):
         self.assertEqual(struct.unpack(">II", png[16:24]), (507, 505))
     def test_anim_placed_only_on_babacar_page(self):
         self.assertIn('id="carte-animee"', HTML)
-        self.assertIn('src="babacar-animation-stop.gif"', HTML)
+        self.assertIn('src="babacar-final.png"', HTML)
+        self.assertIn('data-gif-src="babacar-animation-stop.gif"', HTML)
         self.assertIn('data-final-src="babacar-final.png"', HTML)
-        self.assertIn("setTimeout(()=>{if(digiyAnimated.isConnected)digiyAnimated.src=digiyAnimated.dataset.finalSrc},3200)", HTML)
+        self.assertIn('id="replayAnimatedCard"', HTML)
+        self.assertIn("digiyReplay.addEventListener('click',playAnimatedCard)", HTML)
+        self.assertIn("digiyAnimated.dataset.gifSrc+'?play='+(++playNumber)", HTML)
+        self.assertIn('animationTimer=setTimeout(finishAnimation,3200)', HTML)
+        self.assertIn("digiyAnimated.src=digiyAnimated.dataset.finalSrc", HTML)
+        self.assertIn('IntersectionObserver', HTML)
+        self.assertIn("e.intersectionRatio>=0.55", HTML)
+        self.assertIn('prefers-reduced-motion: reduce', HTML)
         self.assertIn('loading="lazy"', HTML)
     def test_existing_contacts_and_qr_unchanged(self):
         self.assertIn('href="tel:+221776125124"', HTML)
@@ -37,6 +45,8 @@ class AnimatedCard(unittest.TestCase):
         self.assertEqual(set(re.findall(r"^\s{2}(fr|wo|zh|en|es|pt|it|de|nl|ar):",block,re.M)),{"fr","wo","zh","en","es","pt","it","de","nl","ar"})
         self.assertNotIn("analytics",block.lower())
         self.assertNotIn("data:image/gif;base64",HTML)
+        self.assertEqual(HTML.count('▶ '),11)
+        self.assertIn('<img id="animatedGif" src="babacar-final.png"', HTML)
 
 if __name__ == "__main__":
     unittest.main()

@@ -94,11 +94,12 @@
         <a class="btn gold" id="animatedChoice" href="#carte-animee" style="display:block;margin:12px 0 0">🎞 Carte animée</a>
         <figure class="digiyAnimatedCard" id="carte-animee">
           <figcaption id="animatedTitle">Carte animée de Babacar</figcaption>
-          <img id="animatedGif" src="babacar-animation-stop.gif"
-               data-final-src="babacar-final.png"
+          <img id="animatedGif" src="babacar-final.png"
+               data-gif-src="babacar-animation-stop.gif" data-final-src="babacar-final.png"
                alt="Carte animée de Babacar, puis QR et numéro lisibles"
                width="507" height="505" loading="lazy" decoding="async">
           <small id="animatedHelp">3 secondes d'animation, puis la dernière image reste fixe. Appelez ou contactez Babacar sur WhatsApp via cette fiche.</small>
+          <button class="btn gold" id="replayAnimatedCard" type="button">▶ Revoir l’animation</button>
           <button class="btn share" id="shareAnimatedCard" type="button">📤 Partager la fiche</button>
         </figure>
       </aside></section>
@@ -122,16 +123,16 @@ nl:{brand:'DIGIYLYFE-LID',kicker:'Professionele loodgieter · Saly · Petite Cô
 ar:{brand:'عضو DIGIYLYFE',kicker:'سباك محترف · سالي · الساحل الصغير',lead:'إصلاح التسربات والحنفيات والمراحيض والأحواض والدش والأنابيب والتركيبات الصحية والأعمال الصغيرة. يشرح العميل حاجته ويرد بابكر مباشرة حسب التوفر.',official:'👤 عضو DIGIYLYFE',direct:'📲 واتساب مباشر',write:'📲 مراسلة بابكر',call:'📞 اتصال مباشر',share:'📤 مشاركة الملف',services:'خدمات ميدانية',servicesLead:'اشرح المكان والمشكلة ودرجة الاستعجال. يؤكد المهني السعر والتوفر مباشرة.',items:['💧 إصلاح التسرب','🚰 الحنفيات والأحواض','🚽 المراحيض وخزانات الطرد','🚿 الدش والأعمال الصحية','🔧 الأنابيب','🏠 أعمال صغيرة'],doctrine:'<strong>مسار DIGIY:</strong><br>يرى العميل المهنة ← يتواصل مع بابكر ← يحتفظ بابكر بعميله وبالدفع. بلا وسيط وبلا عمولة.',qr:'امسح أو اضغط',copy:'🔗 نسخ الرابط',card:'🪪 بطاقة مهنية',copied:'تم نسخ الرابط',prompt:'انسخ هذا الرابط:',shareText:'سباكة في سالي · تواصل مباشر · عمولة DIGIY صفر.',wa:'مرحباً بابكر، وصلت من ملفك على DIGIYLYFE ولدي حاجة في السباكة.',footer:'DIGIY BUILD · تواصل مباشر · دفع مباشر للمهني · عمولة DIGIY صفر.'}
 };
 const ANIM_LABELS={
-  fr:["🪪 Carte classique","🎞 Carte animée","Carte animée de Babacar","3 secondes de mouvement, puis carte fixe pour lire le QR. Appeler et WhatsApp restent accessibles sur cette fiche.","📤 Partager la fiche"],
-  wo:["🪪 Kart bu dal","🎞 Kart buy yëngu","Kart buy yëngu bu Babacar","3 saa yu yëngu, gannaaw loolu kart bi dal ngir QR bi jàngliku. Woo walla WhatsApp ci fiche bii.","📤 Séddoo fiche bi"],
-  zh:["🪪 静态名片","🎞 动态名片","Babacar 的动态名片","动画播放约3秒后停在可扫描的二维码上。可在此页面致电或通过 WhatsApp 联系。","📤 分享此页面"],
-  en:["🪪 Classic card","🎞 Animated card","Babacar’s animated card","Three seconds of motion, then a still card for scanning the QR. Call and WhatsApp remain available on this page.","📤 Share this page"],
-  es:["🪪 Tarjeta clásica","🎞 Tarjeta animada","Tarjeta animada de Babacar","Tres segundos de animación; después, imagen fija para escanear el QR. Llamar y WhatsApp siguen disponibles aquí.","📤 Compartir la ficha"],
-  pt:["🪪 Cartão clássico","🎞 Cartão animado","Cartão animado de Babacar","Três segundos de animação e depois imagem fixa para ler o QR. Chamada e WhatsApp continuam disponíveis aqui.","📤 Partilhar a ficha"],
-  it:["🪪 Biglietto classico","🎞 Biglietto animato","Biglietto animato di Babacar","Tre secondi di animazione, poi immagine fissa per il QR. Chiamata e WhatsApp restano disponibili qui.","📤 Condividi la scheda"],
-  de:["🪪 Klassische Karte","🎞 Animierte Karte","Animierte Karte von Babacar","Drei Sekunden Animation, danach ein Standbild zum QR-Scannen. Anruf und WhatsApp sind hier verfügbar.","📤 Profil teilen"],
-  nl:["🪪 Klassieke kaart","🎞 Geanimeerde kaart","Geanimeerde kaart van Babacar","Drie seconden animatie, daarna een stilstaand beeld om de QR te scannen. Bellen en WhatsApp blijven hier beschikbaar.","📤 Profiel delen"],
-  ar:["🪪 بطاقة ثابتة","🎞 بطاقة متحركة","بطاقة باباكار المتحركة","ثلاث ثوان من الحركة، ثم صورة ثابتة لمسح رمز QR. الاتصال وواتساب متاحان في هذه الصفحة.","📤 مشاركة الصفحة"]
+  fr:["🪪 Carte classique","🎞 Carte animée","Carte animée de Babacar","3 secondes de mouvement, puis carte fixe pour lire le QR. Appeler et WhatsApp restent accessibles sur cette fiche.","📤 Partager la fiche","▶ Revoir l’animation"],
+  wo:["🪪 Kart bu dal","🎞 Kart buy yëngu","Kart buy yëngu bu Babacar","3 saa yu yëngu, gannaaw loolu kart bi dal ngir QR bi jàngliku. Woo walla WhatsApp ci fiche bii.","📤 Séddoo fiche bi","▶ Seetaat kart buy yëngu"],
+  zh:["🪪 静态名片","🎞 动态名片","Babacar 的动态名片","动画播放约3秒后停在可扫描的二维码上。可在此页面致电或通过 WhatsApp 联系。","📤 分享此页面","▶ 再看一次动画"],
+  en:["🪪 Classic card","🎞 Animated card","Babacar’s animated card","Three seconds of motion, then a still card for scanning the QR. Call and WhatsApp remain available on this page.","📤 Share this page","▶ Replay animation"],
+  es:["🪪 Tarjeta clásica","🎞 Tarjeta animada","Tarjeta animada de Babacar","Tres segundos de animación; después, imagen fija para escanear el QR. Llamar y WhatsApp siguen disponibles aquí.","📤 Compartir la ficha","▶ Repetir animación"],
+  pt:["🪪 Cartão clássico","🎞 Cartão animado","Cartão animado de Babacar","Três segundos de animação e depois imagem fixa para ler o QR. Chamada e WhatsApp continuam disponíveis aqui.","📤 Partilhar a ficha","▶ Repetir animação"],
+  it:["🪪 Biglietto classico","🎞 Biglietto animato","Biglietto animato di Babacar","Tre secondi di animazione, poi immagine fissa per il QR. Chiamata e WhatsApp restano disponibili qui.","📤 Condividi la scheda","▶ Rivedi l’animazione"],
+  de:["🪪 Klassische Karte","🎞 Animierte Karte","Animierte Karte von Babacar","Drei Sekunden Animation, danach ein Standbild zum QR-Scannen. Anruf und WhatsApp sind hier verfügbar.","📤 Profil teilen","▶ Animation erneut ansehen"],
+  nl:["🪪 Klassieke kaart","🎞 Geanimeerde kaart","Geanimeerde kaart van Babacar","Drie seconden animatie, daarna een stilstaand beeld om de QR te scannen. Bellen en WhatsApp blijven hier beschikbaar.","📤 Profiel delen","▶ Animatie opnieuw afspelen"],
+  ar:["🪪 بطاقة ثابتة","🎞 بطاقة متحركة","بطاقة باباكار المتحركة","ثلاث ثوان من الحركة، ثم صورة ثابتة لمسح رمز QR. الاتصال وواتساب متاحان في هذه الصفحة.","📤 مشاركة الصفحة","▶ إعادة تشغيل الحركة"]
 };
 const OWNER_LABEL={wo:'🔐 Duggu boroom fiche bi',zh:'🔐 业主入口',fr:'🔐 Accès propriétaire',en:'🔐 Owner access',es:'🔐 Acceso propietario',pt:'🔐 Acesso proprietário',it:'🔐 Accesso proprietario',de:'🔐 Inhaberzugang',nl:'🔐 Eigenaartoegang',ar:'🔐 دخول المالك'};
 function ownerUrl(){const u=new URL('https://build.digiylyfe.com/acces-proprietaire-v2.html');u.searchParams.set('site','babacar-plombier-pro');u.searchParams.set('lang',lang==='zh'||lang==='wo'?'fr':lang);u.searchParams.set('return',profileUrl?profileUrl():profile());return u.toString()}
@@ -139,23 +140,48 @@ function pick(){let q=new URLSearchParams(location.search).get('lang');try{if(!P
 let lang=pick();
 function profileUrl(){const u=new URL(URL_BASE);u.searchParams.set('lang',lang);return u.toString()}
 function waUrl(){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(P[lang].wa)}
-function apply(l){lang=P[l]?l:'fr';try{localStorage.setItem('digiy-lang',lang)}catch(e){}const t=P[lang];document.documentElement.lang=lang==='zh'?'zh-CN':lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.title='Babacar Plombier Pro — DIGIY BUILD';document.querySelector('meta[name="description"]').content=t.lead;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.getElementById('returnLabel').textContent=t.back||'RETOUR DIGIYLYFE';document.getElementById('heroStatic').textContent=t.hero||'Artisan plombier à Saly et Mbour, sur la Petite Côte — dépannage et installation sanitaire.';document.getElementById('contactLabel').textContent=t.contact||'Contact direct :';document.getElementById('detailCta').textContent=t.detail||'Besoin d’un plombier à Saly ou Mbour ? Voir les prestations et contacter Babacar →';document.getElementById('brandSub').textContent=t.brand;document.getElementById('kicker').textContent=t.kicker;document.getElementById('lead').textContent=t.lead;document.getElementById('badgeOfficial').textContent=t.official;document.getElementById('badgeDirect').textContent=t.direct;document.getElementById('waTop').textContent=t.write;document.getElementById('waTop').href=waUrl();document.getElementById('callTop').textContent=t.call;document.getElementById('shareTop').textContent=t.share;document.getElementById('ownerAccessBtn').textContent=OWNER_LABEL[lang]||OWNER_LABEL.fr;document.getElementById('ownerAccessBtn').href=ownerUrl();document.getElementById('ownerAccessBtn').hidden=((window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true);document.getElementById('servicesTitle').textContent=t.services;document.getElementById('servicesLead').textContent=t.servicesLead;document.getElementById('services').innerHTML=t.items.map(x=>'<div class="service">'+x+'</div>').join('');document.getElementById('doctrine').innerHTML=t.doctrine;document.getElementById('qrTitle').textContent=t.qr;document.getElementById('copyBtn').textContent=t.copy;document.getElementById('cardBtn').textContent=t.card;document.getElementById('copyDock').textContent=t.copy.replace(/^🔗\s*/,'');document.getElementById('shareDock').textContent=t.share.replace(/^📤\s*/,'');document.getElementById('footer').textContent=t.footer;document.getElementById('dockWa').href=waUrl();document.getElementById('buildLink').href='https://build.digiylyfe.com/?lang='+(lang==='zh'||lang==='wo'?'fr':lang);document.querySelector('#dockCall span').textContent=({fr:'Appeler',en:'Call',es:'Llamar',pt:'Ligar',it:'Chiama',de:'Anrufen',nl:'Bellen',ar:'اتصل',wo:'Woo',zh:'致电'})[lang];document.getElementById('profileUrl').textContent=profileUrl();const a=ANIM_LABELS[lang]||ANIM_LABELS.fr;document.getElementById('cardBtn').textContent=a[0];document.getElementById('animatedChoice').textContent=a[1];document.getElementById('animatedTitle').textContent=a[2];document.getElementById('animatedHelp').textContent=a[3];document.getElementById('shareAnimatedCard').textContent=a[4];setQr()}
+function apply(l){lang=P[l]?l:'fr';try{localStorage.setItem('digiy-lang',lang)}catch(e){}const t=P[lang];document.documentElement.lang=lang==='zh'?'zh-CN':lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.title='Babacar Plombier Pro — DIGIY BUILD';document.querySelector('meta[name="description"]').content=t.lead;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));document.getElementById('returnLabel').textContent=t.back||'RETOUR DIGIYLYFE';document.getElementById('heroStatic').textContent=t.hero||'Artisan plombier à Saly et Mbour, sur la Petite Côte — dépannage et installation sanitaire.';document.getElementById('contactLabel').textContent=t.contact||'Contact direct :';document.getElementById('detailCta').textContent=t.detail||'Besoin d’un plombier à Saly ou Mbour ? Voir les prestations et contacter Babacar →';document.getElementById('brandSub').textContent=t.brand;document.getElementById('kicker').textContent=t.kicker;document.getElementById('lead').textContent=t.lead;document.getElementById('badgeOfficial').textContent=t.official;document.getElementById('badgeDirect').textContent=t.direct;document.getElementById('waTop').textContent=t.write;document.getElementById('waTop').href=waUrl();document.getElementById('callTop').textContent=t.call;document.getElementById('shareTop').textContent=t.share;document.getElementById('ownerAccessBtn').textContent=OWNER_LABEL[lang]||OWNER_LABEL.fr;document.getElementById('ownerAccessBtn').href=ownerUrl();document.getElementById('ownerAccessBtn').hidden=((window.matchMedia&&window.matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true);document.getElementById('servicesTitle').textContent=t.services;document.getElementById('servicesLead').textContent=t.servicesLead;document.getElementById('services').innerHTML=t.items.map(x=>'<div class="service">'+x+'</div>').join('');document.getElementById('doctrine').innerHTML=t.doctrine;document.getElementById('qrTitle').textContent=t.qr;document.getElementById('copyBtn').textContent=t.copy;document.getElementById('cardBtn').textContent=t.card;document.getElementById('copyDock').textContent=t.copy.replace(/^🔗\s*/,'');document.getElementById('shareDock').textContent=t.share.replace(/^📤\s*/,'');document.getElementById('footer').textContent=t.footer;document.getElementById('dockWa').href=waUrl();document.getElementById('buildLink').href='https://build.digiylyfe.com/?lang='+(lang==='zh'||lang==='wo'?'fr':lang);document.querySelector('#dockCall span').textContent=({fr:'Appeler',en:'Call',es:'Llamar',pt:'Ligar',it:'Chiama',de:'Anrufen',nl:'Bellen',ar:'اتصل',wo:'Woo',zh:'致电'})[lang];document.getElementById('profileUrl').textContent=profileUrl();const a=ANIM_LABELS[lang]||ANIM_LABELS.fr;document.getElementById('cardBtn').textContent=a[0];document.getElementById('animatedChoice').textContent=a[1];document.getElementById('animatedTitle').textContent=a[2];document.getElementById('animatedHelp').textContent=a[3];document.getElementById('shareAnimatedCard').textContent=a[4];document.getElementById('replayAnimatedCard').textContent=a[5];setQr()}
 function setQr(){const url=profileUrl(),img=document.getElementById('qr');function fallback(){img.src='https://api.qrserver.com/v1/create-qr-code/?size=320x320&margin=10&data='+encodeURIComponent(url)}try{if(window.QRCode&&QRCode.toDataURL)QRCode.toDataURL(url,{width:320,margin:1},(e,d)=>{if(e||!d)fallback();else img.src=d});else fallback()}catch(e){fallback()}}
 function note(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1800)}
 function copy(){const u=profileUrl(),t=P[lang];if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(()=>note(t.copied));else window.prompt(t.prompt,u)}
 function share(){const t=P[lang],u=profileUrl();if(navigator.share)navigator.share({title:'Babacar Plombier Pro — DIGIY BUILD',text:t.shareText,url:u}).catch(()=>{});else window.open('https://wa.me/?text='+encodeURIComponent(t.shareText+' '+u),'_blank','noopener')}
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{const u=new URL(location.href);u.searchParams.set('lang',b.dataset.lang);history.replaceState({},'',u);apply(b.dataset.lang)});document.getElementById('copyBtn').onclick=copy;document.getElementById('dockCopy').onclick=copy;document.getElementById('shareTop').onclick=share;document.getElementById('dockShare').onclick=share;document.getElementById('shareAnimatedCard').onclick=share;
 const digiyAnimated=document.getElementById('animatedGif');
-if(digiyAnimated){
-  let armed=false;
-  function freezeAnimatedCard(){
-    if(armed)return;
-    armed=true;
-    setTimeout(()=>{if(digiyAnimated.isConnected)digiyAnimated.src=digiyAnimated.dataset.finalSrc},3200);
+const digiyReplay=document.getElementById('replayAnimatedCard');
+if(digiyAnimated && digiyReplay){
+  let animationTimer=0, playNumber=0, observer=null;
+  function finishAnimation(){
+    clearTimeout(animationTimer);
+    digiyAnimated.onload=null;
+    digiyAnimated.onerror=null;
+    if(digiyAnimated.isConnected)digiyAnimated.src=digiyAnimated.dataset.finalSrc;
+    digiyReplay.disabled=false;
   }
-  digiyAnimated.addEventListener('load',freezeAnimatedCard,{once:true});
-  digiyAnimated.addEventListener('error',()=>{digiyAnimated.src=digiyAnimated.dataset.finalSrc},{once:true});
-  if(digiyAnimated.complete&&digiyAnimated.naturalWidth)freezeAnimatedCard();
+  function playAnimatedCard(){
+    if(observer){observer.disconnect();observer=null;}
+    clearTimeout(animationTimer);
+    digiyReplay.disabled=true;
+    digiyAnimated.onload=()=>{
+      digiyAnimated.onload=null;
+      animationTimer=setTimeout(finishAnimation,3200);
+    };
+    digiyAnimated.onerror=finishAnimation;
+    // Une URL différente relance aussi l'animation dans Safari/iPhone.
+    digiyAnimated.src=digiyAnimated.dataset.gifSrc+'?play='+(++playNumber);
+  }
+  digiyReplay.addEventListener('click',playAnimatedCard);
+  // Le GIF ne démarre que lorsque le visiteur arrive à sa carte.
+  if('IntersectionObserver' in window){
+    observer=new IntersectionObserver(entries=>{
+      if(entries.some(e=>e.isIntersecting && e.intersectionRatio>=0.55)){
+        if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+          observer.disconnect();observer=null;return;
+        }
+        playAnimatedCard();
+      }
+    },{threshold:[0,0.55]});
+    observer.observe(digiyAnimated);
+  }
 }
 apply(lang)
 })();
