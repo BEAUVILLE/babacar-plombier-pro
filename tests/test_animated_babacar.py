@@ -9,8 +9,8 @@ HTML = (ROOT / "index.html").read_text(encoding="utf-8")
 
 class AnimatedCard(unittest.TestCase):
     def test_real_assets_and_dimensions(self):
-        gif = (ROOT / "carte-babacar-animee-stop.gif").read_bytes()
-        png = (ROOT / "carte-babacar-animee-finale.png").read_bytes()
+        gif = (ROOT / "babacar-animation-stop.gif").read_bytes()
+        png = (ROOT / "babacar-final.png").read_bytes()
         self.assertIn(gif[:6], (b"GIF87a", b"GIF89a"))
         self.assertEqual(struct.unpack("<HH", gif[6:10]), (507, 505))
         self.assertNotIn(b"NETSCAPE2.0", gif, "Ne pas programmer de boucle infinie")
@@ -18,8 +18,8 @@ class AnimatedCard(unittest.TestCase):
         self.assertEqual(struct.unpack(">II", png[16:24]), (507, 505))
     def test_anim_placed_only_on_babacar_page(self):
         self.assertIn('id="carte-animee"', HTML)
-        self.assertIn('src="carte-babacar-animee-stop.gif"', HTML)
-        self.assertIn('data-final-src="carte-babacar-animee-finale.png"', HTML)
+        self.assertIn('src="babacar-animation-stop.gif"', HTML)
+        self.assertIn('data-final-src="babacar-final.png"', HTML)
         self.assertIn("setTimeout(()=>{if(digiyAnimated.isConnected)digiyAnimated.src=digiyAnimated.dataset.finalSrc},3200)", HTML)
         self.assertIn('loading="lazy"', HTML)
     def test_existing_contacts_and_qr_unchanged(self):
